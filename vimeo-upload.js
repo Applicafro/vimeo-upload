@@ -191,6 +191,7 @@
     me.prototype.upload = function() {
         var xhr = new XMLHttpRequest()
         xhr.open(this.httpMethod, this.url, true)
+        xhr.setRequestHeader('Accept', 'application/vnd.vimeo.*+json;version=3.2')
         xhr.setRequestHeader('Authorization', 'Bearer ' + this.token)
         xhr.setRequestHeader('Content-Type', 'application/json')
 
